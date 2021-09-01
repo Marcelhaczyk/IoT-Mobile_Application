@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Config">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" android:layout_weight="0.40" android:gravity="center">
+                <TextView
+                        android:text="SERVER"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textViewConfigServer"
+                        android:gravity="center" android:textSize="24sp"/>
+                <TextView
+                        android:text="Server adress:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textViewConfigServerAdress"
+                        android:textSize="16sp"/>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/editTextConfigServerAdress" android:textSize="20sp"
+                        android:text="http://sirius.cs.put.poznan.pl"/>
+                <TextView
+                        android:text="Port number:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textViewConfigServerPort"
+                        android:textSize="16sp"/>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editTextConfigServerPort" android:textSize="20sp"
+                        android:maxLength="5" android:text="80"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" android:layout_weight="0.40">
+                <TextView
+                        android:text="DATA ACQUISITION"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textViewConfigData"
+                        android:gravity="center" android:textSize="24sp"/>
+                <TextView
+                        android:text="Sampling period [ms]:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textViewConfigDataSamplingPeriod"
+                        android:textSize="16sp"/>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editTextConfigDataPeriod" android:textSize="20sp" android:text="500"/>
+                <TextView
+                        android:text="Max number of saved measured points:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textViewConfigDataMaxNo"
+                        android:textSize="16sp"/>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editTextConfigDataMaxNo" android:textSize="20sp" android:text="1000"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" android:layout_weight="0.20">
+                <Button
+                        android:text="Accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/buttonConfigAccept"
+                        style="@style/Widget.AppCompat.Button"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>
